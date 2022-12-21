@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  node-app:
+    image: node-app-dev
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"
